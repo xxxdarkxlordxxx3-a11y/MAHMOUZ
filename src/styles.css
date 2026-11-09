@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sword-thrasher');
+@import url('https://fonts.cdnfonts.com/css/subatomic-tsoonami');
+
+/* ==========================================
+   1. نظام الألوان والمتغيرات العامة
+   ========================================== */
+
+:root,
+[data-theme="dark"] {
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --text-main: #E2E8F0;
+    --text-sub: #94A3B8;
+    --btn-primary: #F97316;
+    --accent-tech: #06B6D4;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --nav-bg: rgba(15, 23, 42, 0.8);
+    --footer-bg: rgba(15, 23, 42, 0.85);
+    --icon-default: #E2E8F0;
+}
+
+[data-theme="light"] {
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --text-main: #1E222A;
+    --text-sub: #475569;
+    --btn-primary: #EA580C;
+    --accent-tech: #0284C7;
+    --border-color: rgba(226, 232, 240, 0.8);
+    --glass-shadow: 0 8px 30px rgba(148, 163, 184, 0.12);
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --footer-bg: rgba(255, 255, 255, 0.9);
+    --icon-default: #1E222A;
+}
+
+
+/* ==========================================
+   2. الإعدادات العامة ودمج إعداداتك الخاصة (Reset)
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playpen Sans Arabic', 'Cairo', Tahoma, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    color: var(--text-main);
+    /* تم إزالة الخلفية من هنا تماماً عشان تتحكم فيها براحتك */
+}
+
+section,
+main {
+    direction: rtl;
+    position: relative;
+}
+
+img {
+    object-fit: cover;
+    user-select: none;
+}
+
+
+/* ==========================================
+   3. تصميم مخصص وسلس لـ Scrollbar (Custom Scrollbar)
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-tech);
+}
+
+
+/* ==========================================
+   4. تنسيقات عامة للعناصر الأساسية
+   ========================================== */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
