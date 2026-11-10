@@ -7,26 +7,42 @@ div {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0px 0px 8px 0px rgb(142 142 142 / 53%);
-    border-radius: 10px;
-    padding: 10px;
+    /* التعديل الجذري هنا: بيقرا المتغير الصح اللي متعرّف في الثيم (أبيض للنهار، داكن لليل) */
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
     overflow: auto;
     margin: 12.5px;
-    /* إضافه تأثير الانسيابية والحركة بدون المساس بقيمك الأساسية */
-    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 div:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0px 12px 25px 0px rgba(142, 142, 142, 0.4);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.35);
+    border-color: var(--accent-tech);
+}
+
+div h4 {
+    color: var(--text-main);
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+div p {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    margin-top: 5px;
 }
 
 img {
     width: 173px;
     height: auto;
     transition: transform 0.4s ease;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 div:hover img {

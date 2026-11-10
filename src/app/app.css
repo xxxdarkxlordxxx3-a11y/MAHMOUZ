@@ -6,11 +6,12 @@
    1. نظام الألوان المتغير ديناميكياً (Themes)
    ========================================== */
 
-/* الوضع الداكن - عميق وفخم جداً */
+/* الوضع الداكن - كروت سوداء داكنة وفخمة */
 :host,
 [data-theme="dark"] {
     --bg-main: #0B0F19;
-    --bg-card: rgba(30, 41, 59, 0.7);
+    --bg-card: #121824;
+    /* أسود داكن مريح للكارت في الوضع الليلي */
     --text-main: #E2E8F0;
     --text-sub: #94A3B8;
     --btn-primary: #F97316;
@@ -22,10 +23,11 @@
     --icon-default: #E2E8F0;
 }
 
-/* الوضع الفاتح - مريح، ناصع، وعصري */
+/* الوضع الفاتح - كروت بيضاء ناصعة وعصرية */
 [data-theme="light"] {
     --bg-main: linear-gradient(135deg, rgba(241, 102, 42, 0.05) 0%, rgba(248, 250, 252, 1) 50%, rgba(51, 169, 220, 0.05) 100%);
-    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-card: #FFFFFF;
+    /* أبيض صافي للكارت في الوضع النهاري */
     --text-main: #1E222A;
     --text-sub: #475569;
     --btn-primary: #EA580C;
@@ -313,12 +315,14 @@ footer {
 .animate-float {
     animation: floatGentle 4s infinite ease-in-out;
 }
+
 footer>p {
     text-align: center;
     max-width: 300px;
     margin: 0 15px;
     line-height: 1.6;
 }
+
 @media (max-width: 768px) {
     footer {
         flex-direction: column !important;

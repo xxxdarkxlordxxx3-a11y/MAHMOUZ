@@ -3,14 +3,12 @@
 @import url('https://fonts.cdnfonts.com/css/subatomic-tsoonami');
 
 /* ==========================================
-   1. نظام الألوان والمتغيرات العامة (Variables)
+   1. نظام الألوان والمتغيرات العامة
    ========================================== */
 
 :root,
 [data-theme="dark"] {
-    --bg-color: #0b0f19;
-    --text-color: #f8fafc;
-    --card-bg: rgba(30, 41, 59, 0.7);
+    --bg-card: rgba(30, 41, 59, 0.7);
     --text-main: #E2E8F0;
     --text-sub: #94A3B8;
     --btn-primary: #F97316;
@@ -20,13 +18,10 @@
     --nav-bg: rgba(15, 23, 42, 0.8);
     --footer-bg: rgba(15, 23, 42, 0.85);
     --icon-default: #E2E8F0;
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 }
 
 [data-theme="light"] {
-    --bg-color: #f8fafc;
-    --text-color: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.85);
+    --bg-card: rgba(255, 255, 255, 0.85);
     --text-main: #1E222A;
     --text-sub: #475569;
     --btn-primary: #EA580C;
@@ -36,11 +31,11 @@
     --nav-bg: rgba(255, 255, 255, 0.85);
     --footer-bg: rgba(255, 255, 255, 0.9);
     --icon-default: #1E222A;
-    --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
 }
 
+
 /* ==========================================
-   2. الإعدادات العامة والتنسيق الأساسي (Reset)
+   2. الإعدادات العامة ودمج إعداداتك الخاصة (Reset)
    ========================================== */
 
 * {
@@ -58,9 +53,8 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-main);
+    /* تم إزالة الخلفية من هنا تماماً عشان تتحكم فيها براحتك */
 }
 
 section,
@@ -74,15 +68,9 @@ img {
     user-select: none;
 }
 
-/* تنسيق الكروت والعناصر العامة */
-.card,
-.app-container {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-}
 
 /* ==========================================
-   3. تصميم مخصص وسلس لـ Scrollbar
+   3. تصميم مخصص وسلس لـ Scrollbar (Custom Scrollbar)
    ========================================== */
 
 ::-webkit-scrollbar {
@@ -104,8 +92,9 @@ img {
     background: var(--accent-tech);
 }
 
+
 /* ==========================================
-   4. الروابط والعناصر الأخرى
+   4. تنسيقات عامة للعناصر الأساسية
    ========================================== */
 
 a {
