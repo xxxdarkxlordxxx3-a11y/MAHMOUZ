@@ -3,12 +3,14 @@
 @import url('https://fonts.cdnfonts.com/css/subatomic-tsoonami');
 
 /* ==========================================
-   1. نظام الألوان والمتغيرات العامة
+   1. نظام الألوان والمتغيرات العامة (Variables)
    ========================================== */
 
 :root,
 [data-theme="dark"] {
-    --bg-card: rgba(30, 41, 59, 0.7);
+    --bg-color: #0b0f19;
+    --text-color: #f8fafc;
+    --card-bg: rgba(30, 41, 59, 0.7);
     --text-main: #E2E8F0;
     --text-sub: #94A3B8;
     --btn-primary: #F97316;
@@ -18,17 +20,13 @@
     --nav-bg: rgba(15, 23, 42, 0.8);
     --footer-bg: rgba(15, 23, 42, 0.85);
     --icon-default: #E2E8F0;
-    --bg-color: #0b0f19;
-    /* خلفية داكنة ونظيفة متناغمة */
-    --text-color: #f8fafc;
-        /* نص فاتح وواضح للقراءة */
-    --card-bg: #1e293b;
-    /* لون الكروت في الوضع الداكن */
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 }
 
 [data-theme="light"] {
-    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.85);
     --text-main: #1E222A;
     --text-sub: #475569;
     --btn-primary: #EA580C;
@@ -38,33 +36,11 @@
     --nav-bg: rgba(255, 255, 255, 0.85);
     --footer-bg: rgba(255, 255, 255, 0.9);
     --icon-default: #1E222A;
-}
-
-/* تحديد المتجر أو المتغيرات الأساسية للوضع الفاتح والداكن */
-:root {
-    --bg-color: #f8fafc;
-    --text-color: #0f172a;
-    --card-bg: #ffffff;
     --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
 }
 
-
-
-/* تطبيق الألوان على جسم الصفحة والعناصر الأساسية */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* تنسيق الكروت عشان تاخد لون متناسق مع الوضع الداكن */
-.card,
-.app-container {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-}
 /* ==========================================
-   2. الإعدادات العامة ودمج إعداداتك الخاصة (Reset)
+   2. الإعدادات العامة والتنسيق الأساسي (Reset)
    ========================================== */
 
 * {
@@ -82,8 +58,9 @@ html {
 body {
     height: 100%;
     margin: 0;
-    color: var(--text-main);
-    /* تم إزالة الخلفية من هنا تماماً عشان تتحكم فيها براحتك */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section,
@@ -97,9 +74,15 @@ img {
     user-select: none;
 }
 
+/* تنسيق الكروت والعناصر العامة */
+.card,
+.app-container {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
 
 /* ==========================================
-   3. تصميم مخصص وسلس لـ Scrollbar (Custom Scrollbar)
+   3. تصميم مخصص وسلس لـ Scrollbar
    ========================================== */
 
 ::-webkit-scrollbar {
@@ -121,9 +104,8 @@ img {
     background: var(--accent-tech);
 }
 
-
 /* ==========================================
-   4. تنسيقات عامة للعناصر الأساسية
+   4. الروابط والعناصر الأخرى
    ========================================== */
 
 a {
