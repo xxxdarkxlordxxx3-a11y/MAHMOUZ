@@ -25,7 +25,6 @@ section p mark {
 /* المعرض على اختيارك (4 أعمدة) مع أنيميشن ظهور هادئ */
 section>#gallary {
     columns: 4;
-    column-gap: 20px;
     margin-top: 30px;
     width: 100%;
 }
