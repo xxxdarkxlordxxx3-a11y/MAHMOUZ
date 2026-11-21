@@ -68,19 +68,16 @@
 <hr>
 <section id="Gym" class="container2">
 <div id="img">
-    <img class="photoes-setting img-hover" src="me2.jpg" style="border-radius: 20px;" alt="Gym photo" width="350px" height="440px">
+    <img class="photoes-setting img-hover" src="me2.jpg" style="border-radius: 20px;" alt="Gym photo" width="350px" height="550px">
 </div>
 <div>
     <p id="word">اكتر رياضة بحبها هي <span style="font-size: xx-large;">ال</span><span style="font-size: 90px; color: #e74f0f; font-family: 'Sword Thrasher';">GYM</span></p>
     <p>الجيم مش مجرد رياضة عادية ده اسلوب حياه كامل. لما تروح الجيم هتظبط اكلك، لما اكلك يظبط نومك هيظبط، لما نومك هيظبط دماغك هتظبط ولما دماغك تظبط عاداتك هتظبط ولما عاداتك هتبط حياتك هتبقى احسن ده غير ان الجيم بيحسن الانتاجية جدا وبيفرز هرمونات بتخليك مبسوط جدا وهادي بس لما تتمرن بضمير</p>
     <p>الهرمونات دي هي:</p>
     <ul>
-        <li>التستيستيرون</li>
-        <li>الGH</li>
-        <li>الدوبامين</li>
-        <li>الاندروفين</li>
-        <li>الادرينالين</li>
-        <li>النورادرينالين</li>
+        @for (h of hormonList; track h) {
+            <li>{{ h }}</li>
+        }
     </ul>
     <p>جدولي هو: <span style="color:#e74f0f;">push </span><span style="color: #1572b6;">pull </span><span style="color: rgba(52, 207, 0, 0.907);">legs </span>rest upper lower rest</p>
 </div>

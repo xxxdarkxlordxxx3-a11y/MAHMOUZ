@@ -13,4 +13,5 @@ export class Home {
     now: Date = new Date();
     g: number = +this.now - +this.bornDate;
     age = Math.floor(this.g / 1000 / 60 / 60 / 24 / 365);
+    hormonList = ['التستيستيرون', "الGH", "الدوبامين", "الاندروفين", "الادرينالين", "النورادرينالين"]
 }
